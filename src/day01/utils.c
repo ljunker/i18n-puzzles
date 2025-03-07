@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include <string.h>
 
 size_t calc_char_length(const char *str) {
