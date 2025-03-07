@@ -1,6 +1,8 @@
 # Compiler and flags
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+LDFLAGS = -licuuc -licudata
+
 
 # Build directory
 BUILD_DIR = build
@@ -15,7 +17,7 @@ all:
 day01: $(BUILD_DIR)/day01
 
 # Rule to compile dayXX into the build directory
-$(BUILD_DIR)/day01: src/day01/day01.c | $(BUILD_DIR)
+$(BUILD_DIR)/day01: src/day01/*.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $< -o $@
 
 # Ensure the build directory exists
